@@ -1,0 +1,70 @@
+[
+    {
+        "category": "Dev in progress",
+        "categoryId" : 35,
+        "tasks" : [
+            {
+                "taskId" : 24,
+                "title" : "Create signup form",
+                "status" : "Devin progress",
+                "description" : "Create the given UI",
+                "storyPoints" : 4,
+                "subtasks" : [
+                    "redirect to dashboard",
+                    "Implement backend"
+                ]
+            }
+        ]
+    },
+    {
+        "category": "QA in progress",
+        "categoryId" : 35,
+        "tasks" : [
+            {
+                "taskId" : 24,
+                "title" : "Create signup form",
+                "status" : "Devin progress",
+                "description" : "Create the given UI",
+                "storyPoints" : 4,
+                "subtasks" : [
+                    "redirect to dashboard",
+                    "Implement backend"
+                ]
+            }
+        ]
+    },
+    {
+        "category": "Rework",
+        "categoryId" : 35,
+        "tasks" : [
+            {
+                "taskId" : 24,
+                "title" : "Create signup form",
+                "status" : "Devin progress",
+                "description" : "Create the given UI",
+                "storyPoints" : 4,
+                "subtasks" : [
+                    "redirect to dashboard",
+                    "Implement backend"
+                ]
+            }
+        ]
+    },
+    {
+        "category": "Closed",
+        "categoryId" : 35,
+        "tasks" : [
+            {
+                "taskId" : 24,
+                "title" : "Create signup form",
+                "status" : "Devin progress",
+                "description" : "Create the given UI",
+                "storyPoints" : 4,
+                "subtasks" : [
+                    "redirect to dashboard",
+                    "Implement backend"
+                ]
+            }
+        ]
+    }
+]
