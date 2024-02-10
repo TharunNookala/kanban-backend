@@ -34,14 +34,30 @@ const createSendToken = (user, statusCode, res) => {
   });
 };
 
-exports.signup = catchAsync(async (res, req, next) => {
-  const newUser = await User.create({
-    email: req.body.email,
-    password: req.body.password,
-    passwordConfirm: req.body.passwordConfirm,
-  });
+exports.signup = catchAsync(async (req, res, next) => {
+  const { email, password, confirmPassword } = req.body;
+  const userExist = await User.findOne({ email });
 
-  createSendToken(newUser, 201, res);
+  if (userExist) {
+    return next(new appError("User already exist", 400));
+  }
+
+  try {
+    const newUser = await User.create({
+      email,
+      password,
+      confirmPassword,
+    });
+    newUser.password = undefined;
+    res.status(200).json({
+      status: "success",
+      data: {
+        user: newUser,
+      },
+    });
+  } catch (error) {
+    return next(new appError("Failed to create user", 500));
+  }
 });
 
 exports.login = catchAsync(async (req, res, next) => {

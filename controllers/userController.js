@@ -19,6 +19,12 @@ exports.createUser = (req, res) => {
     message: "NOt defined",
   });
 };
+exports.getUser = (req, res) => {
+  res.status(500).json({
+    status: "error",
+    message: "NOt defined",
+  });
+};
 
 exports.updateUser = (req, res) => {
   res.status(500).json({
